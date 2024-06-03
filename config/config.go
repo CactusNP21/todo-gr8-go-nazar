@@ -25,7 +25,7 @@ func GetConfiguration() Configuration {
 		DatabaseUser:        getOrDefault("DB_USER", "postgres"),
 		DatabasePassword:    getOrDefault("DB_PASSWORD", "123456"),
 		MigrateToVersion:    getOrDefault("MIGRATE", "latest"),
-		MigrationLocation:   getOrDefault("MIGRATION_LOCATION", "C:/Users/nazar/IdeaProjects/todo-gr8-go/internal/infra/database/migrations"),
+		MigrationLocation:   getOrDefault("MIGRATION_LOCATION", "internal/infra/database/migrations"),
 		FileStorageLocation: getOrDefault("FILES_LOCATION", "file_storage"),
 		JwtSecret:           getOrDefault("JWT_SECRET", "1234567890"),
 		JwtTTL:              72 * time.Hour,
