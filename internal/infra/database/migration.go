@@ -9,6 +9,7 @@ import (
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
@@ -18,7 +19,7 @@ func Migrate(conf config.Configuration) error {
 	}
 
 	migrationsPath := conf.MigrationLocation
-
+	log.Printf(filepath.Abs(migrationsPath))
 	_, err := os.Stat(migrationsPath)
 	if err != nil {
 		return err
